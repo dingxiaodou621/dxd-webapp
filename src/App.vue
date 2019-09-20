@@ -15,15 +15,28 @@
 </template>
 
 <script>
-import request from '@/utils/request'
+// import request from '@/utils/request'
 
-// 测试是否好使，经测试-数据有效
-request({
-  method: 'GET',
-  url: '/app/v1_0/channels'
-}).then(res => {
-  console.log(res)
-})
+// 封装了 axios，测试是否好使，通过测试，
+// request({
+//   method: 'GET',
+//   url: '/app/v1_0/channels'
+// }).then(res => {
+//   console.log(res)
+// })
+
+// 配置处理后端返回的数据中包含超出 JavaScript 安全整数范围问题-测试数据，通过测试。
+// request({
+//   method: 'GET',
+//   url: '/app/v1_1/articles',
+//   params: {
+//     channel_id: 0,
+//     timestamp: Date.now(),
+//     with_top: 1
+//   }
+// }).then(res => {
+//   console.log(res.data)
+// })
 
 export default {
   name: 'App'
